@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Linker CLI - DOC.TON.DEV</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">DOC.TON.DEV</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">1. Compilers <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../ABI Specification/">ABI Specification</a>
+</li>
+                                    
+<li >
+    <a href="../Intro/">Intro</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Linker CLI</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">LLVM</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../LLVM/1. Compiler Highlights/">1. Compiler Highlights</a>
+</li>
+            
+<li >
+    <a href="../LLVM/2. C Support Status/">Language Features</a>
+</li>
+            
+<li >
+    <a href="../LLVM/3. C to TVM Library/">3. C to TVM Library</a>
+</li>
+            
+<li >
+    <a href="../LLVM/4. Debugging Options/">4. Debugging Options</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Solidity</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../Solidity/1. Support status/">1. Support status</a>
+</li>
+            
+<li >
+    <a href="../Solidity/2. Reference Guide/">2. Reference Guide</a>
+</li>
+            
+<li >
+    <a href="../Solidity/3. Usage/">3. Usage</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">2. SDK <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../2. SDK/1. Installation/">1. Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../2. SDK/2. Overview/">2. Overview</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Auxiliaries</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../2. SDK/Auxiliaries/Getting Logs/">Getting Logs</a>
+</li>
+            
+<li >
+    <a href="../../2. SDK/Auxiliaries/Installing Ubuntu VM/">Installing Ubuntu VM</a>
+</li>
+            
+<li >
+    <a href="../../2. SDK/Auxiliaries/TON SDK CLI/">TON SDK CLI</a>
+</li>
+            
+<li >
+    <a href="../../2. SDK/Auxiliaries/Troubleshooting/">Troubleshooting</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Client Libraries</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Library Modules</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../2. SDK/Client Libraries/Library Modules/1. Contracts/">1. Contracts</a>
+</li>
+            
+<li >
+    <a href="../../2. SDK/Client Libraries/Library Modules/2. Queries/">2. Queries</a>
+</li>
+            
+<li >
+    <a href="../../2. SDK/Client Libraries/Library Modules/3. Crypto/">3. Crypto</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Using Libraries</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../2. SDK/Client Libraries/Using Libraries/2. Node.js/">2. Node.js</a>
+</li>
+            
+<li >
+    <a href="../../2. SDK/Client Libraries/Using Libraries/3. Rust/">3. Rust</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Local node</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../2. SDK/Local node/Local Node/">Local Node</a>
+</li>
+            
+<li >
+    <a href="../../2. SDK/Local node/Node SE Giver/">Node SE Giver</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">TON Labs Testnet</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../2. SDK/TON Labs Testnet/Testnet Giver/">Testnet Giver</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">3. TON Blockchain <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../3. TON Blockchain/Gal Calculation Basics/">Gas Calculation Basics</a>
+</li>
+                                    
+<li >
+    <a href="../../3. TON Blockchain/Replay Attack Protection/">Replay Attack Protection</a>
+</li>
+                                    
+<li >
+    <a href="../../3. TON Blockchain/Storage Fee Calculation/">Welcome to MkDocs</a>
+</li>
+                                    
+<li >
+    <a href="../../3. TON Blockchain/TVM Error Codes/">TVM Error Codes</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">4. FAQ <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../4. FAQ/">TON Dev Documentation</a>
+</li>
+                                    
+<li >
+    <a href="../../4. FAQ/SDK and Integration/">SDK and Integration</a>
+</li>
+                                    
+<li >
+    <a href="../../4. FAQ/Smart Contracts/">Smart Contracts</a>
+</li>
+                                    
+<li >
+    <a href="../../4. FAQ/Solidity Compiler/">Solidity Compiler</a>
+</li>
+                                    
+<li >
+    <a href="../../4. FAQ/TON and TVM/">TON and TVM</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">5. Misc <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../5. Misc/Glossary/">The Moonspeak</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../Intro/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../LLVM/1. Compiler Highlights/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#key-use-cases">Key Use Cases</a></li>
+            <li><a href="#compilation">Compilation</a></li>
+            <li><a href="#test-run">Test Run</a></li>
+            <li><a href="#message-creation">Message Creation</a></li>
+        <li class="main "><a href="#abi-file-format">ABI File Format</a></li>
+        <li class="main "><a href="#more-help">More Help</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="key-use-cases">Key Use Cases</h2>
+<p>The linker Toolchain tool is called the <em>tvm_linker</em> and can be used in one of the following modes:</p>
+<ul>
+<li><strong>Compilation</strong>. In this mode the linker compiles several modules together and provides final contract (a .tvc file) for further running using TVM.</li>
+<li><strong>Test run</strong>. In this mode the linker runs previously prepared compiled contract using TVM emulator. This may be used to check the correctness of some smart contract parts without running them on a node.</li>
+<li><strong>Message preparation</strong>. In this mode, the linker prepares an inbound message for a contract in the <em>.boc</em> format.</li>
+</ul>
+<h3 id="compilation">Compilation</h3>
+<p>Following command line format should be used to compile several modules together:</p>
+<pre><code class="scala">tvm_linker compile [--debug] [--lib &lt;STDLIB&gt;] &lt;ASM_FILE&gt; ...
+
+</code></pre>
+
+<p>where:</p>
+<ul>
+<li><code>*--*</code>(first instance) stands for the path to an assembler file; there can be several assembler files for compilation;</li>
+<li><code>*--*</code> (second instance) stands for the path a to standard library assembler file (for example, stdlib_c.tvm);</li>
+<li><code>--debug</code> command line option enables debug output of linking; for example, it can be used to get addresses of global symbols (for example, of functions).</li>
+</ul>
+<p>After the above command is executed, the linker delivers a compiled contract in the <em>.tvc</em> format.</p>
+<h3 id="test-run">Test Run</h3>
+<p>After assembler files are linked together, you can use the linker to run a compiled contract. This command does not start the node and has a limited usage.</p>
+<p>Mainly, test runs are used for local debugging of code parts the do not require interaction between smart contracts (e.g.: unit tests).</p>
+<p>Command line format for test run is following:</p>
+<pre><code class="scala">tvm_linker test &lt;CONTRACT_ADDRESS&gt; [--trace] [--decode-c6] --body 00&lt;ENTRY_ADDRESS&gt;
+
+</code></pre>
+
+<p>where:</p>
+<ul>
+<li><code>*--*</code> (instance one) stands for the address of a contract that has to be run. Note that the .tvc extension is not included;</li>
+<li><code>--</code> (instance two) stands for the contract starting point; it can be extracted from the <code>tvm_linker compile</code> output in <code>--debug</code> mode;</li>
+<li><code>--trace</code> option is used to trace VM execution; each time a VM command is executed, stack and registers are printed;</li>
+<li><code>--decode-c6</code> option is used to display output actions in a friendly format.</li>
+</ul>
+<h3 id="message-creation">Message Creation</h3>
+<p>Messages can be sent to a contract in a <em>.boc</em> format. These messages use contract ABI and a list of input key-value pairs.</p>
+<p>In the command line a message has the following format:</p>
+<pre><code class="scala">tvm_linker message &lt;contract-address&gt; [--init] [-w] --abi-json &lt;json-file-with-abi&gt; --abi-method &lt;method-name&gt; --abi-params &lt;json-string-with-params&gt;
+</code></pre>
+
+<p>where:</p>
+<ul>
+<li><code>--</code> (instance one) stands for the address of a target contract; note that the .tvc extension is omitted;</li>
+<li><code>--</code> (instance two) stands for the workchain ID used with the contract address;</li>
+<li><code>--</code> (instance three) stands for the path to a relevant ABI file that defines methods and their input/output parameters (see description below);</li>
+<li><code>--</code> (instance four) stands for the contract method called via the message;</li>
+<li><code>--</code>(instance five) stands for contract method parameters in JSON format (for example, {“a”: “0x123”, “b” : “456”});</li>
+</ul>
+<h2 id="abi-file-format">ABI File Format</h2>
+<p>An ABI file defines available contract methods, input parameters and outputs. ABI has a JSON-based syntax with the following structure:</p>
+<ul>
+<li><code>“ABI version”</code>: the version of ABI file format (should be 0 for now);</li>
+<li><code>“functions”</code>: array of contract methods.</li>
+</ul>
+<p>Each contract method has following format:</p>
+<ul>
+<li><code>*"name"*</code> - the name of a method (the method requires the<code>*_Impl* suffix</code>; for example, if an ABI file has a <code>*‘fn1’*</code> method, then contract should have implementation of this method entitled <code>*‘fn1_Impl’*</code>);</li>
+<li><code>*“signed”*</code> defines whether the method is signed or not (values are <code>“true"</code> or <code>“false”</code>)</li>
+<li><code>*“inputs”*</code> contains the list of input parameters;</li>
+<li><code>*“outputs”*</code> stands for the list of output parameters.</li>
+</ul>
+<p>Each method parameter has the following format:</p>
+<ul>
+<li><code>“name”</code> stands for name of a parameter;</li>
+<li><code>“type”</code> type of a parameter ( only “uint64” is supported now).</li>
+</ul>
+<p>For example:</p>
+<pre><code class="javascript">{
+    &quot;ABI version&quot; : 0,
+    &quot;functions&quot; : [
+      {
+        &quot;name&quot; : &quot;fn1&quot;,
+        &quot;signed&quot; : &quot;false&quot;,
+        &quot;inputs&quot; : [
+          {&quot;name&quot; : &quot;arg1&quot;, &quot;type&quot; : &quot;uint64&quot;}
+        ],
+        &quot;outputs&quot; : [
+          {&quot;name&quot; : &quot;result&quot;, &quot;type&quot; : &quot;uint64&quot;}
+        ]
+      }
+    ]
+}
+</code></pre>
+
+<h2 id="more-help">More Help</h2>
+<p>Use <code>tvm_linker --help</code> for detailed description about all options, flags and sub-commands.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
