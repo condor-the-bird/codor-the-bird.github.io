@@ -7,16 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  <link rel="shortcut icon" href="/img/favicon.ico">
-  <title>DOC.TON.DEV</title>
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Storage Fee Calculation - DOC.TON.DEV</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="/css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
-  <script src="/js/jquery-2.1.1.min.js" defer></script>
-  <script src="/js/modernizr-2.8.3.min.js" defer></script>
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Storage Fee Calculation";
+    var mkdocs_page_input_path = "TON Blockchain\\Storage Fee Calculation.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
@@ -31,9 +38,9 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="/." class="icon icon-home"> DOC.TON.DEV</a>
+        <a href="../.." class="icon icon-home"> DOC.TON.DEV</a>
         <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="//search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
@@ -45,7 +52,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="/.">Home</a>
+    <a class="" href="../..">Home</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -54,15 +61,15 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="/Compilers/ABI Specification/">ABI Specification</a>
+    <a class="" href="../../Compilers/ABI Specification/">ABI Specification</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/Compilers/Intro/">Intro</a>
+    <a class="" href="../../Compilers/Intro/">Intro</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/Compilers/Linker CLI/">Linker CLI</a>
+    <a class="" href="../../Compilers/Linker CLI/">Linker CLI</a>
                 </li>
                 <li class="">
                     
@@ -70,19 +77,19 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="/Compilers/LLVM Compiler/1. Compiler Highlights/">1. Compiler Highlights</a>
+    <a class="" href="../../Compilers/LLVM Compiler/1. Compiler Highlights/">1. Compiler Highlights</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="/Compilers/LLVM Compiler/2. C Support Status/">Language Features</a>
+    <a class="" href="../../Compilers/LLVM Compiler/2. C Support Status/">Language Features</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="/Compilers/LLVM Compiler/3. C to TVM Library/">3. C to TVM Library</a>
+    <a class="" href="../../Compilers/LLVM Compiler/3. C to TVM Library/">3. C to TVM Library</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="/Compilers/LLVM Compiler/4. Debugging Options/">4. Debugging Options</a>
+    <a class="" href="../../Compilers/LLVM Compiler/4. Debugging Options/">4. Debugging Options</a>
                 </li>
     </ul>
                 </li>
@@ -92,15 +99,15 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="/Compilers/Solidity Compiler/Reference Guide/">Reference Guide</a>
+    <a class="" href="../../Compilers/Solidity Compiler/Reference Guide/">Reference Guide</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="/Compilers/Solidity Compiler/Solidity Support status/">Solidity Support Status</a>
+    <a class="" href="../../Compilers/Solidity Compiler/Solidity Support status/">Solidity Support Status</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="/Compilers/Solidity Compiler/Usage/">Usage</a>
+    <a class="" href="../../Compilers/Solidity Compiler/Usage/">Usage</a>
                 </li>
     </ul>
                 </li>
@@ -113,23 +120,23 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="/FAQ/">TON Dev Documentation</a>
+    <a class="" href="../../FAQ/">TON Dev Documentation</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/FAQ/SDK and Integration/">SDK and Integration</a>
+    <a class="" href="../../FAQ/SDK and Integration/">SDK and Integration</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/FAQ/Smart Contracts/">Smart Contracts</a>
+    <a class="" href="../../FAQ/Smart Contracts/">Smart Contracts</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/FAQ/Solidity Compiler/">Solidity Compiler</a>
+    <a class="" href="../../FAQ/Solidity Compiler/">Solidity Compiler</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/FAQ/TON and TVM/">TON and TVM</a>
+    <a class="" href="../../FAQ/TON and TVM/">TON and TVM</a>
                 </li>
     </ul>
 	    </li>
@@ -140,7 +147,7 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="/Misc/Glossary/">The Moonspeak</a>
+    <a class="" href="../../Misc/Glossary/">The Moonspeak</a>
                 </li>
     </ul>
 	    </li>
@@ -151,11 +158,11 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="/SDK/Installation/">Installation</a>
+    <a class="" href="../../SDK/Installation/">Installation</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/SDK/Overview/">Overview</a>
+    <a class="" href="../../SDK/Overview/">Overview</a>
                 </li>
                 <li class="">
                     
@@ -163,19 +170,19 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="/SDK/Auxiliaries/Getting Logs/">Getting Logs</a>
+    <a class="" href="../../SDK/Auxiliaries/Getting Logs/">Getting Logs</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="/SDK/Auxiliaries/Installing Ubuntu VM/">Installing Ubuntu VM</a>
+    <a class="" href="../../SDK/Auxiliaries/Installing Ubuntu VM/">Installing Ubuntu VM</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="/SDK/Auxiliaries/TON SDK CLI/">TON SDK CLI</a>
+    <a class="" href="../../SDK/Auxiliaries/TON SDK CLI/">TON SDK CLI</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="/SDK/Auxiliaries/Troubleshooting/">Troubleshooting</a>
+    <a class="" href="../../SDK/Auxiliaries/Troubleshooting/">Troubleshooting</a>
                 </li>
     </ul>
                 </li>
@@ -189,19 +196,19 @@
     <ul class="subnav">
                 <li class="toctree-l4">
                     
-    <a class="" href="/SDK/Client Libraries/Library Modules/Contracts/">Contracts</a>
+    <a class="" href="../../SDK/Client Libraries/Library Modules/Contracts/">Contracts</a>
                 </li>
                 <li class="toctree-l4">
                     
-    <a class="" href="/SDK/Client Libraries/Library Modules/Crypto/">Crypto</a>
+    <a class="" href="../../SDK/Client Libraries/Library Modules/Crypto/">Crypto</a>
                 </li>
                 <li class="toctree-l4">
                     
-    <a class="" href="/SDK/Client Libraries/Library Modules/Overview/">Overview</a>
+    <a class="" href="../../SDK/Client Libraries/Library Modules/Overview/">Overview</a>
                 </li>
                 <li class="toctree-l4">
                     
-    <a class="" href="/SDK/Client Libraries/Library Modules/Queries/">Queries</a>
+    <a class="" href="../../SDK/Client Libraries/Library Modules/Queries/">Queries</a>
                 </li>
     </ul>
                 </li>
@@ -211,11 +218,11 @@
     <ul class="subnav">
                 <li class="toctree-l4">
                     
-    <a class="" href="/SDK/Client Libraries/Using Libraries/Node.js/">Node.js</a>
+    <a class="" href="../../SDK/Client Libraries/Using Libraries/Node.js/">Node.js</a>
                 </li>
                 <li class="toctree-l4">
                     
-    <a class="" href="/SDK/Client Libraries/Using Libraries/Rust/">Rust</a>
+    <a class="" href="../../SDK/Client Libraries/Using Libraries/Rust/">Rust</a>
                 </li>
     </ul>
                 </li>
@@ -227,11 +234,11 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="/SDK/Local node/Local Node/">Local Node</a>
+    <a class="" href="../../SDK/Local node/Local Node/">Local Node</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="/SDK/Local node/Node SE Giver/">Node SE Giver</a>
+    <a class="" href="../../SDK/Local node/Node SE Giver/">Node SE Giver</a>
                 </li>
     </ul>
                 </li>
@@ -241,7 +248,7 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="/SDK/TON Labs Testnet/Testnet Giver/">Testnet Giver</a>
+    <a class="" href="../../SDK/TON Labs Testnet/Testnet Giver/">Testnet Giver</a>
                 </li>
     </ul>
                 </li>
@@ -254,19 +261,25 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="/TON Blockchain/Gal Calculation Basics/">Gas Calculation Basics</a>
+    <a class="" href="../Gal Calculation Basics/">Gas Calculation Basics</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/TON Blockchain/Replay Attack Protection/">Replay Attack Protection</a>
+    <a class="" href="../Replay Attack Protection/">Replay Attack Protection</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Storage Fee Calculation</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#storage-fee-calculation">Storage Fee Calculation</a></li>
+    
+
+    </ul>
                 </li>
                 <li class="">
                     
-    <a class="" href="/TON Blockchain/Storage Fee Calculation/">Storage Fee Calculation</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="/TON Blockchain/TVM Error Codes/">TVM Error Codes</a>
+    <a class="" href="../TVM Error Codes/">TVM Error Codes</a>
                 </li>
     </ul>
 	    </li>
@@ -281,7 +294,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="/.">DOC.TON.DEV</a>
+        <a href="../..">DOC.TON.DEV</a>
       </nav>
 
       
@@ -289,9 +302,15 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="/.">Docs</a> &raquo;</li>
+    <li><a href="../..">Docs</a> &raquo;</li>
     
+      
+        
+          <li>TON Blockchain &raquo;</li>
+        
+      
     
+    <li>Storage Fee Calculation</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -301,15 +320,32 @@
           <div role="main">
             <div class="section">
               
+                <h1 id="storage-fee-calculation">Storage Fee Calculation</h1>
+<p>Every transaction in TON has a storage phase that implies a certain storage fee charged on an account balance. This fee is charged for the period between transactions and is calculated according to the following formula:</p>
+<pre><code>Storage fee =(account.bits*global_bit_price+account.cells*global_cell_price)*period
+</code></pre>
 
-  <h1 id="404-page-not-found">404</h1>
-
-  <p><strong>Page not found</strong></p>
-
-
+<p>where:</p>
+<ul>
+<li><code>account.bits</code> and <code>account.cells</code> stand for a number of bits and cells in the Account structure represented as tree of cells (including code and data).</li>
+<li><code>global_bit_price</code> is a global configuration parameter; price for storing one bit. Currently in the testnet it is 1 nanogram.</li>
+<li><code>global_cell_price</code> another global configuration parameter; price for storing one cell. Currently in the testnet it is 500 nanogram.</li>
+<li>period - number of seconds since previous storage fee payment.</li>
+</ul>
+<p>If the account balance is less than the due storage fee, the account is frozen and its balance is subtracted from storage fee and reduced to zero. Remaining storage fee is stored in account as debt</p>
+              
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../TVM Error Codes/" class="btn btn-neutral float-right" title="TVM Error Codes">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Replay Attack Protection/" class="btn btn-neutral" title="Replay Attack Protection"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -333,12 +369,16 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
+        <span><a href="../Replay Attack Protection/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../TVM Error Codes/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
-    <script>var base_url = '/';</script>
-    <script src="/js/theme.js" defer></script>
-      <script src="/search/main.js" defer></script>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
 
 </body>
 </html>

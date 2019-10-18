@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>The Moonspeak - DOC.TON.DEV</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "The Moonspeak";
+    var mkdocs_page_input_path = "Misc\\Glossary.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> DOC.TON.DEV</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Compilers</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Compilers/ABI Specification/">ABI Specification</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Compilers/Intro/">Intro</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Compilers/Linker CLI/">Linker CLI</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">LLVM Compiler</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/LLVM Compiler/1. Compiler Highlights/">1. Compiler Highlights</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/LLVM Compiler/2. C Support Status/">Language Features</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/LLVM Compiler/3. C to TVM Library/">3. C to TVM Library</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/LLVM Compiler/4. Debugging Options/">4. Debugging Options</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Solidity Compiler</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/Solidity Compiler/Reference Guide/">Reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/Solidity Compiler/Solidity Support status/">Solidity Support Status</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/Solidity Compiler/Usage/">Usage</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">FAQ</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../FAQ/">TON Dev Documentation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../FAQ/SDK and Integration/">SDK and Integration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../FAQ/Smart Contracts/">Smart Contracts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../FAQ/Solidity Compiler/">Solidity Compiler</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../FAQ/TON and TVM/">TON and TVM</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Misc</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">The Moonspeak</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#the-moonspeak">The Moonspeak</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#b">B</a></li>
+        
+            <li><a class="toctree-l4" href="#c">C</a></li>
+        
+            <li><a class="toctree-l4" href="#d">D</a></li>
+        
+            <li><a class="toctree-l4" href="#n">N</a></li>
+        
+            <li><a class="toctree-l4" href="#s">S</a></li>
+        
+            <li><a class="toctree-l4" href="#t">T</a></li>
+        
+            <li><a class="toctree-l4" href="#v">V</a></li>
+        
+            <li><a class="toctree-l4" href="#w">W</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">SDK</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../SDK/Installation/">Installation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../SDK/Overview/">Overview</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Auxiliaries</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Auxiliaries/Getting Logs/">Getting Logs</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Auxiliaries/Installing Ubuntu VM/">Installing Ubuntu VM</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Auxiliaries/TON SDK CLI/">TON SDK CLI</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Auxiliaries/Troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Client Libraries</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Library Modules</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Library Modules/Contracts/">Contracts</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Library Modules/Crypto/">Crypto</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Library Modules/Overview/">Overview</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Library Modules/Queries/">Queries</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Using Libraries</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Using Libraries/Node.js/">Node.js</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Using Libraries/Rust/">Rust</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Local node</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Local node/Local Node/">Local Node</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Local node/Node SE Giver/">Node SE Giver</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">TON Labs Testnet</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/TON Labs Testnet/Testnet Giver/">Testnet Giver</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">TON Blockchain</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../TON Blockchain/Gal Calculation Basics/">Gas Calculation Basics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../TON Blockchain/Replay Attack Protection/">Replay Attack Protection</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../TON Blockchain/Storage Fee Calculation/">Storage Fee Calculation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../TON Blockchain/TVM Error Codes/">TVM Error Codes</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">DOC.TON.DEV</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Misc &raquo;</li>
+        
+      
+    
+    <li>The Moonspeak</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="the-moonspeak">The Moonspeak</h1>
+<p>This brief set of terms and definitions is in no way exhaustive or final. It is based on personal experience with blockchain or related concepts and aims at making complex things a little more clear.</p>
+<p>What makes blockchain talk complicated, is that this rapidly evolving phenomenon pools together multiple concepts, methodologies and ideas from numerous areas and domains from math to behaviorist studies. Considered separately, each item may be clear and logical, but once pooled together and interwoven, they are not easy to define and describe in plain well-structured phrases.</p>
+<p>For example, explanation of the root term - Blockchain - can start from the basic notion of database, but just as well we can choose P2P networks as the starting place. Bringing both together within a single definition makes it long and more confusing.</p>
+<p>But we keep on trying. Hope you will have a good time reading it. Feedback and suggestions are welcome.</p>
+<h2 id="b">B</h2>
+<h3 id="blockchain">Blockchain</h3>
+<p>Blockchain is basically a database for storing transactions packed in blocks. Blockchain has some technical particularities that make it ideal for fintech services but quite awkward for general DB uses: data in blockchain cannot be changed (i.e. transactions are unchangeable), all data is linked to its owner, all data meets some mandatory rules (i.e. it is consistent) and, ta-da, its decentralized. Blockchains rely on peer-to-peer interaction and require no third-party regulation, control or coordination. To ensure fairness, there is consensus (validation procedures that enable mining) and encryption technologies.</p>
+<p>Another, broader, term for this type of databases is Distributed Ledger.</p>
+<blockquote>
+<p><strong>Tip</strong>: for further reading we would suggesting articles about peer-to-peer networks, sharding, workchains, multi-chain models.</p>
+</blockquote>
+<h2 id="c">C</h2>
+<h3 id="cold-wallet">Cold Wallet</h3>
+<p>Cold wallet (aka hardware wallet) is a physical appliance (an nfc-card, a usb drive) where wallet private keys are stored. Cold wallets are considered more secure, as there is no way to hack them. Also, in some cases a cold wallet enables easier and faster access to transactions.</p>
+<p>For example, with an nfc-card you only have to hover it over the back side of your device to start transactions. No more mess with passwords and pin-codes. </p>
+<h3 id="consensus">Consensus</h3>
+<p>Consensus is a protocol implemented within a blochchain to make sure that its nodes (engines that maintain the blockchain and may process transactions, depending on the architecture) agree on requirements to transactions to validate them.</p>
+<p>Interestingly, validation enabled crypto-currency mining, as newly mined coins are the reward for validating a transaction.</p>
+<p>With consensus in place, no centralized regulation is needed to prevent frauds. There are several popular consensus protocols: Proof of Work (PoW), Proof of Stake, Delegated Proof of Stake, etc. New consensus mechanisms evolve to reduce energy consumption associated with the PoW and optimize overall performance. Moreover, consensus without mining is being developed and researched.</p>
+<h3 id="crypto-currency">Crypto-currency</h3>
+<p>Surprise, surprise, but crypto-currency is not necessarily blockchain and blockchain is not necessarily crypto-currency. Technically speaking, to generate crypto-currency one needs a distributed ledger meeting two core requirements: decentralized storage and encryption technology. Yet, blockchain remains the most popular, because it enables mining (i.e. generating new currency units) as a reward for transaction validation thus reducing commissions imposed on the parties.</p>
+<blockquote>
+<p><strong>Tip</strong>: to dig deeper, you might want to research the related concepts: fiat money, token, burning, mining vs. minting, Byzantine Generals Problem, TenderMint.</p>
+</blockquote>
+<h2 id="d">D</h2>
+<h3 id="dapp-decentralized-application">Dapp, Decentralized application</h3>
+<p>In short, it is an application (usually fintech) with a blockchain smart-contract behind it to ensure fairness and decentralization. An extended definition though has to cover the infrastructure a bit. A standard app either operates locally (e.g. a single-player game) or uses some standard server-client architecture (e.g. a bank app). In blockchain, every Dapp is basically a smart contract that describes transactions and rules applied to them. Roughly speaking, each smart contract has a server side that is stored in the blockchain and executed by the virtual machine (back-end for machine-to-machine interaction) and the client-side that is available to a user and has a GUI for human to machine interaction (front-end). The two parts interact via messaging (basically, requests to the contract and its responses). The front-end part can be implement in many popular programming languages, most popular are .js and .ts, Python is on the rise.</p>
+<h3 id="decentralized-economy">Decentralized economy</h3>
+<p>In the real world anarchy turns out to be a disaster and everybody's business is known to be nobody's business. Communism failed and is dabbed a Utopian concept forever. In the digital world, however, blockchain is the game-changer when it comes to equal rights, fair play, data security, privacy, decentralization, democracy, transparency. You can have it all without any central authority, regulations and dictatorship. Hmm, is it as good as it sounds? Let's see.</p>
+<p>Booming peer to peer networks with consensus methods allow parties to safely and transparently carry out financial (or other) transactions without any regulator. Being just a technical thing, P2P solutions (in particular, blockchain) have no geographical, social, political or gender bias.</p>
+<h2 id="n">N</h2>
+<h3 id="node">Node</h3>
+<p>Basically, Node is a blockchain server that has a working instance of a virtual machine (VM) and a set of relevant instruments that ensure VM interaction with clients (i.e. for example, with customer applications). Every blockchain platform has its own messaging standards and protocols, let alone VM's, so node architectures differ across platforms. What's more even within a single platform variations may exist, although all nodes have to be compatible within a platform. </p>
+<blockquote>
+<p>Visit <a href="https://ton.dev/">TON Dev</a> for its Node SE offer.</p>
+</blockquote>
+<h2 id="s">S</h2>
+<h3 id="smart-contract">Smart contract</h3>
+<p>Smart contract is not a legal document, rather, it is a piece of code deployed in blockchain. This code contains an executable sequence of operations. Each operation manipulates some available data (e.g. an account balance), retrieves it and\or changes it (e.g. transfers an amount). Each instance of smart contract execution is a blockchain transaction with block generation.</p>
+<p>Smart contract is the core part of each Dapp (roughly speaking, it is its back end). Smart contracts may interact with each other.</p>
+<p>There are several types of standard smart contracts that implement tokens. The most famous is ERC20.</p>
+<h2 id="t">T</h2>
+<h3 id="tokenomics">Tokenomics</h3>
+<p>This concept does not take blockchain beyond crypto-currencies, but rather it expands the idea of crypto-currencies beyond money the way we have known it. In a solid ecosystem a token becomes more than a means of transaction settlement (buy, pay, transfer, invoice, etc.), it is an attitude, a vote, a stake. For example, you can use tokens to vote for some initiative. If it gets enough votes in tokens, your contribution will be written off your account and used to finance the initiative. This is a basic case, of course, many more can be invented. What makes tokenomics attractive, is the blockchain and smart-contract technology behind. These ensure decentralization, security, fairness, privacy and transparency at the same time.</p>
+<h2 id="v">V</h2>
+<h3 id="virtual-machine">Virtual machine</h3>
+<p>A VM is a blockchain core or engine that takes smart contracts compiled to a blockchain-specific bytecode and executes them (performs transactions). Between transactions smart contracts are stored in the blockchain with persistent data (i.e. the data that remains in the contract). TON VM is called TVM, Ethereum VM is EVM. You can find detailed specification of each in the Internet.</p>
+<h2 id="w">W</h2>
+<h3 id="web-30">Web 3.0</h3>
+<p>The original concept suggested as far back as in 2007 by Jason Calacanis implies a switch from Web 2.0's powerful services and tools to a whole new interaction and work culture. Then it was proposed to define Web 3.0 as the Internet interaction with the physical world.</p>
+<p>The latter idea, although criticized and over-used, resonates with our vision and with the decentralized economy concept. Indeed, blockchain has the potential to foster penetration of the Internet into the real world. Fintech services can be used to manage daily chores and bills, devices (IoT) and many more.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../SDK/Installation/" class="btn btn-neutral float-right" title="Installation">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../FAQ/TON and TVM/" class="btn btn-neutral" title="TON and TVM"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../FAQ/TON and TVM/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../SDK/Installation/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

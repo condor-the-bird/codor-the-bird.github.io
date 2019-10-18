@@ -7,16 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  <link rel="shortcut icon" href="/img/favicon.ico">
-  <title>DOC.TON.DEV</title>
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>1. Compiler Highlights - DOC.TON.DEV</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="/css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
-  <script src="/js/jquery-2.1.1.min.js" defer></script>
-  <script src="/js/modernizr-2.8.3.min.js" defer></script>
+  <script>
+    // Current page data
+    var mkdocs_page_name = "1. Compiler Highlights";
+    var mkdocs_page_input_path = "Compilers\\LLVM Compiler\\1. Compiler Highlights.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
@@ -31,9 +38,9 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="/." class="icon icon-home"> DOC.TON.DEV</a>
+        <a href="../../.." class="icon icon-home"> DOC.TON.DEV</a>
         <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="//search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
@@ -45,7 +52,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="/.">Home</a>
+    <a class="" href="../../..">Home</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -54,35 +61,44 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="/Compilers/ABI Specification/">ABI Specification</a>
+    <a class="" href="../../ABI Specification/">ABI Specification</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/Compilers/Intro/">Intro</a>
+    <a class="" href="../../Intro/">Intro</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/Compilers/Linker CLI/">Linker CLI</a>
+    <a class="" href="../../Linker CLI/">Linker CLI</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
     <span class="caption-text">LLVM Compiler</span>
     <ul class="subnav">
-                <li class="toctree-l3">
+                <li class="toctree-l3 current">
                     
-    <a class="" href="/Compilers/LLVM Compiler/1. Compiler Highlights/">1. Compiler Highlights</a>
+    <a class="current" href="./">1. Compiler Highlights</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#components">Components</a></li>
+    
+
+    <li class="toctree-l4"><a href="#implemented-languages">Implemented Languages</a></li>
+    
+
+    </ul>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="/Compilers/LLVM Compiler/2. C Support Status/">Language Features</a>
+    <a class="" href="../2. C Support Status/">Language Features</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="/Compilers/LLVM Compiler/3. C to TVM Library/">3. C to TVM Library</a>
+    <a class="" href="../3. C to TVM Library/">3. C to TVM Library</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="/Compilers/LLVM Compiler/4. Debugging Options/">4. Debugging Options</a>
+    <a class="" href="../4. Debugging Options/">4. Debugging Options</a>
                 </li>
     </ul>
                 </li>
@@ -92,15 +108,15 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="/Compilers/Solidity Compiler/Reference Guide/">Reference Guide</a>
+    <a class="" href="../../Solidity Compiler/Reference Guide/">Reference Guide</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="/Compilers/Solidity Compiler/Solidity Support status/">Solidity Support Status</a>
+    <a class="" href="../../Solidity Compiler/Solidity Support status/">Solidity Support Status</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="/Compilers/Solidity Compiler/Usage/">Usage</a>
+    <a class="" href="../../Solidity Compiler/Usage/">Usage</a>
                 </li>
     </ul>
                 </li>
@@ -113,23 +129,23 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="/FAQ/">TON Dev Documentation</a>
+    <a class="" href="../../../FAQ/">TON Dev Documentation</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/FAQ/SDK and Integration/">SDK and Integration</a>
+    <a class="" href="../../../FAQ/SDK and Integration/">SDK and Integration</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/FAQ/Smart Contracts/">Smart Contracts</a>
+    <a class="" href="../../../FAQ/Smart Contracts/">Smart Contracts</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/FAQ/Solidity Compiler/">Solidity Compiler</a>
+    <a class="" href="../../../FAQ/Solidity Compiler/">Solidity Compiler</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/FAQ/TON and TVM/">TON and TVM</a>
+    <a class="" href="../../../FAQ/TON and TVM/">TON and TVM</a>
                 </li>
     </ul>
 	    </li>
@@ -140,7 +156,7 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="/Misc/Glossary/">The Moonspeak</a>
+    <a class="" href="../../../Misc/Glossary/">The Moonspeak</a>
                 </li>
     </ul>
 	    </li>
@@ -151,11 +167,11 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="/SDK/Installation/">Installation</a>
+    <a class="" href="../../../SDK/Installation/">Installation</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/SDK/Overview/">Overview</a>
+    <a class="" href="../../../SDK/Overview/">Overview</a>
                 </li>
                 <li class="">
                     
@@ -163,19 +179,19 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="/SDK/Auxiliaries/Getting Logs/">Getting Logs</a>
+    <a class="" href="../../../SDK/Auxiliaries/Getting Logs/">Getting Logs</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="/SDK/Auxiliaries/Installing Ubuntu VM/">Installing Ubuntu VM</a>
+    <a class="" href="../../../SDK/Auxiliaries/Installing Ubuntu VM/">Installing Ubuntu VM</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="/SDK/Auxiliaries/TON SDK CLI/">TON SDK CLI</a>
+    <a class="" href="../../../SDK/Auxiliaries/TON SDK CLI/">TON SDK CLI</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="/SDK/Auxiliaries/Troubleshooting/">Troubleshooting</a>
+    <a class="" href="../../../SDK/Auxiliaries/Troubleshooting/">Troubleshooting</a>
                 </li>
     </ul>
                 </li>
@@ -189,19 +205,19 @@
     <ul class="subnav">
                 <li class="toctree-l4">
                     
-    <a class="" href="/SDK/Client Libraries/Library Modules/Contracts/">Contracts</a>
+    <a class="" href="../../../SDK/Client Libraries/Library Modules/Contracts/">Contracts</a>
                 </li>
                 <li class="toctree-l4">
                     
-    <a class="" href="/SDK/Client Libraries/Library Modules/Crypto/">Crypto</a>
+    <a class="" href="../../../SDK/Client Libraries/Library Modules/Crypto/">Crypto</a>
                 </li>
                 <li class="toctree-l4">
                     
-    <a class="" href="/SDK/Client Libraries/Library Modules/Overview/">Overview</a>
+    <a class="" href="../../../SDK/Client Libraries/Library Modules/Overview/">Overview</a>
                 </li>
                 <li class="toctree-l4">
                     
-    <a class="" href="/SDK/Client Libraries/Library Modules/Queries/">Queries</a>
+    <a class="" href="../../../SDK/Client Libraries/Library Modules/Queries/">Queries</a>
                 </li>
     </ul>
                 </li>
@@ -211,11 +227,11 @@
     <ul class="subnav">
                 <li class="toctree-l4">
                     
-    <a class="" href="/SDK/Client Libraries/Using Libraries/Node.js/">Node.js</a>
+    <a class="" href="../../../SDK/Client Libraries/Using Libraries/Node.js/">Node.js</a>
                 </li>
                 <li class="toctree-l4">
                     
-    <a class="" href="/SDK/Client Libraries/Using Libraries/Rust/">Rust</a>
+    <a class="" href="../../../SDK/Client Libraries/Using Libraries/Rust/">Rust</a>
                 </li>
     </ul>
                 </li>
@@ -227,11 +243,11 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="/SDK/Local node/Local Node/">Local Node</a>
+    <a class="" href="../../../SDK/Local node/Local Node/">Local Node</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="/SDK/Local node/Node SE Giver/">Node SE Giver</a>
+    <a class="" href="../../../SDK/Local node/Node SE Giver/">Node SE Giver</a>
                 </li>
     </ul>
                 </li>
@@ -241,7 +257,7 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="/SDK/TON Labs Testnet/Testnet Giver/">Testnet Giver</a>
+    <a class="" href="../../../SDK/TON Labs Testnet/Testnet Giver/">Testnet Giver</a>
                 </li>
     </ul>
                 </li>
@@ -254,19 +270,19 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="/TON Blockchain/Gal Calculation Basics/">Gas Calculation Basics</a>
+    <a class="" href="../../../TON Blockchain/Gal Calculation Basics/">Gas Calculation Basics</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/TON Blockchain/Replay Attack Protection/">Replay Attack Protection</a>
+    <a class="" href="../../../TON Blockchain/Replay Attack Protection/">Replay Attack Protection</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/TON Blockchain/Storage Fee Calculation/">Storage Fee Calculation</a>
+    <a class="" href="../../../TON Blockchain/Storage Fee Calculation/">Storage Fee Calculation</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/TON Blockchain/TVM Error Codes/">TVM Error Codes</a>
+    <a class="" href="../../../TON Blockchain/TVM Error Codes/">TVM Error Codes</a>
                 </li>
     </ul>
 	    </li>
@@ -281,7 +297,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="/.">DOC.TON.DEV</a>
+        <a href="../../..">DOC.TON.DEV</a>
       </nav>
 
       
@@ -289,9 +305,19 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="/.">Docs</a> &raquo;</li>
+    <li><a href="../../..">Docs</a> &raquo;</li>
     
+      
+        
+          <li>LLVM Compiler &raquo;</li>
+        
+      
+        
+          <li>Compilers &raquo;</li>
+        
+      
     
+    <li>1. Compiler Highlights</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -301,15 +327,34 @@
           <div role="main">
             <div class="section">
               
-
-  <h1 id="404-page-not-found">404</h1>
-
-  <p><strong>Page not found</strong></p>
-
-
+                <h2 id="components">Components</h2>
+<p>Toolchain: c -&gt; binary</p>
+<ul>
+<li>Standard library – runtime</li>
+<li>Contract development library</li>
+<li>Compiler</li>
+<li>TVM-linker</li>
+</ul>
+<h2 id="implemented-languages">Implemented Languages</h2>
+<ul>
+<li>C</li>
+<li>Limited C++ support: C++98, C++03, C++11, C++14, most features of C++17. For more details see <a href="https://clang.llvm.org/cxx_status.html">https://clang.llvm.org/cxx_status.html</a> for Clang 7</li>
+<li>It was checked that classes, inheritance without virtual methods, templates and overloading work.</li>
+<li>Note that virtual methods and exceptions are not supported.</li>
+</ul>
+              
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../2. C Support Status/" class="btn btn-neutral float-right" title="Language Features">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../Linker CLI/" class="btn btn-neutral" title="Linker CLI"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -333,12 +378,16 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
+        <span><a href="../../Linker CLI/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../2. C Support Status/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
-    <script>var base_url = '/';</script>
-    <script src="/js/theme.js" defer></script>
-      <script src="/search/main.js" defer></script>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
 
 </body>
 </html>

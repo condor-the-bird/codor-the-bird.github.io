@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Reference Guide - DOC.TON.DEV</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Reference Guide";
+    var mkdocs_page_input_path = "Compilers\\Solidity Compiler\\Reference Guide.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> DOC.TON.DEV</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Compilers</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../ABI Specification/">ABI Specification</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Intro/">Intro</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Linker CLI/">Linker CLI</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">LLVM Compiler</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../LLVM Compiler/1. Compiler Highlights/">1. Compiler Highlights</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../LLVM Compiler/2. C Support Status/">Language Features</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../LLVM Compiler/3. C to TVM Library/">3. C to TVM Library</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../LLVM Compiler/4. Debugging Options/">4. Debugging Options</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Solidity Compiler</span>
+    <ul class="subnav">
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">Reference Guide</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#decrements">Decrements</a></li>
+    
+
+    <li class="toctree-l4"><a href="#string-literals">String Literals</a></li>
+    
+
+    <li class="toctree-l4"><a href="#unfixed-decimals">Unfixed Decimals</a></li>
+    
+
+    <li class="toctree-l4"><a href="#conditional-loops">Conditional Loops</a></li>
+    
+
+    <li class="toctree-l4"><a href="#comma-operator">Comma Operator</a></li>
+    
+
+    <li class="toctree-l4"><a href="#function-modifiers">Function Modifiers</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#example">Example</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#assembly">Assembly</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#sample-1">Sample 1</a></li>
+        
+            <li><a class="toctree-l5" href="#sample-2">Sample 2</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#call-functions">Call Functions</a></li>
+    
+
+    <li class="toctree-l4"><a href="#return-and-callback">Return and Callback</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Solidity Support status/">Solidity Support Status</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Usage/">Usage</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">FAQ</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../FAQ/">TON Dev Documentation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../FAQ/SDK and Integration/">SDK and Integration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../FAQ/Smart Contracts/">Smart Contracts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../FAQ/Solidity Compiler/">Solidity Compiler</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../FAQ/TON and TVM/">TON and TVM</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Misc</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../Misc/Glossary/">The Moonspeak</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">SDK</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../SDK/Installation/">Installation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../SDK/Overview/">Overview</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Auxiliaries</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../SDK/Auxiliaries/Getting Logs/">Getting Logs</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../SDK/Auxiliaries/Installing Ubuntu VM/">Installing Ubuntu VM</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../SDK/Auxiliaries/TON SDK CLI/">TON SDK CLI</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../SDK/Auxiliaries/Troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Client Libraries</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Library Modules</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../../SDK/Client Libraries/Library Modules/Contracts/">Contracts</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../../SDK/Client Libraries/Library Modules/Crypto/">Crypto</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../../SDK/Client Libraries/Library Modules/Overview/">Overview</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../../SDK/Client Libraries/Library Modules/Queries/">Queries</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Using Libraries</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../../SDK/Client Libraries/Using Libraries/Node.js/">Node.js</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../../SDK/Client Libraries/Using Libraries/Rust/">Rust</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Local node</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../SDK/Local node/Local Node/">Local Node</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../SDK/Local node/Node SE Giver/">Node SE Giver</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">TON Labs Testnet</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../SDK/TON Labs Testnet/Testnet Giver/">Testnet Giver</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">TON Blockchain</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../TON Blockchain/Gal Calculation Basics/">Gas Calculation Basics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../TON Blockchain/Replay Attack Protection/">Replay Attack Protection</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../TON Blockchain/Storage Fee Calculation/">Storage Fee Calculation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../TON Blockchain/TVM Error Codes/">TVM Error Codes</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">DOC.TON.DEV</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Solidity Compiler &raquo;</li>
+        
+      
+        
+          <li>Compilers &raquo;</li>
+        
+      
+    
+    <li>Reference Guide</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="decrements">Decrements</h2>
+<p>The current compiler version does not support Solidity decrements operation.</p>
+<p>Don't use expressions like:</p>
+<pre><code class="javascript">b--;
+</code></pre>
+
+<p>Use instead:</p>
+<pre><code class="javascript">b - 1;
+</code></pre>
+
+<h2 id="string-literals">String Literals</h2>
+<p>The current compiler version does not support Solidity string literal. Avoid expressions like:</p>
+<pre><code class="javascript">bytes32 b = &quot;foo&quot;;   
+</code></pre>
+
+<p>And:</p>
+<pre><code class="javascript">string memory b = &quot;foo&quot;;  
+</code></pre>
+
+<h2 id="unfixed-decimals">Unfixed Decimals</h2>
+<p>Unfixed decimals are not currently supported by the compiler, avoid expressions like:</p>
+<pre><code class="javascript">ufixed b = a * 2.5;
+</code></pre>
+
+<h2 id="conditional-loops">Conditional Loops</h2>
+<p>The compiler supports <em>for</em> and <em>while</em> conditional loops, but does not support <em>do .. while..</em> expressions.</p>
+<p>Don't use:</p>
+<pre><code class="javascript">do {
+        i++;
+ } 
+while (i &lt; x);
+</code></pre>
+
+<p>Use instead:</p>
+<pre><code class="javascript">i++;
+while (i &lt; x) {
+     i++;
+}
+</code></pre>
+
+<h2 id="comma-operator">Comma Operator</h2>
+<p>The comma operator is not yet supported by the compiler, use the suggested workaround.</p>
+<p>Don't use expressions like:</p>
+<pre><code class="javascript">a = (b++, c++);
+</code></pre>
+
+<p>Use instead:</p>
+<pre><code class="js">b++;
+a = c++;                  
+</code></pre>
+
+<p>All in all, this operator is not used often, but you may need for an expression like:</p>
+<pre><code class="javascript">void rev(char *s, size_t len) 
+{ 
+            char *first; 
+            for (first = s, s += len; s &gt;= first; --s) { 
+                    putchar(*s); 
+            } 
+}
+</code></pre>
+
+<h2 id="function-modifiers">Function Modifiers</h2>
+<p>Currently, modifiers are not supported by the sol2tmv compiler, though it is a planned feature and we have a workaround.</p>
+<p>Modifiers must be called directly as functions. The modifier should be defined as a pure or view internal function and should compile correctly.</p>
+<h3 id="example">Example</h3>
+<pre><code class="javascript">//original solidity
+contract Test {
+    address owner;
+
+    modifier onlyOwner() {
+        require(msg.sender == owner);
+        _;
+    }
+
+    function doSmthg() public onlyOwner {
+
+    }
+}
+
+//sol2tvm
+contract Test {
+    address owner;
+
+    function onlyOwner() view internal {
+        require(msg.sender == owner);
+    }
+
+    function doSmthg() public {
+        onlyOwner();
+    }
+}
+</code></pre>
+
+<h2 id="assembly">Assembly</h2>
+<p>Inline, Solidity and Standalone assembly implementations are not used outside the Ethereum VM. TON Labs sol2tvm compiler uses its own equivalent of <a href="https://solidity.readthedocs.io/en/v0.4.24/assembly.html">inline Assembly</a>, other versions are not supported and cannot be compiled.</p>
+<p>Assembly is used sparingly in smart contracts and there is no hard and fast way to provide a workaround. If you have to migrate a smart contract containing assembly code, remove it or rewrite it in Solidity. </p>
+<p>Below we have some standard conversion samples taken from public sources.</p>
+<h3 id="sample-1">Sample 1</h3>
+<p><strong>Assembly</strong></p>
+<pre><code class="assembly">mul(1, add(2, 3)) 
+</code></pre>
+
+<p><strong>Solidity</strong></p>
+<pre><code class="javascript">uint a = (2+3) * 1;                      
+</code></pre>
+
+<h3 id="sample-2">Sample 2</h3>
+<p><strong>Assembly</strong></p>
+<pre><code class="assembly">function add(uint a, uint b){ assembly { let sum := add(a, b) mstore(mload(0x40), sum) }}
+</code></pre>
+
+<p>​                       </p>
+<p><strong>Solidity</strong></p>
+<pre><code class="javascript">function add(uint a, uint b) { uint sum = a + b;}
+</code></pre>
+
+<h2 id="call-functions">Call Functions</h2>
+<p>These functions are best described in Solidity documentation here: <a href="https://solidity.readthedocs.io/en/v0.5.11/types.html#address">https://solidity.readthedocs.io/en/v0.5.11/types.html#address</a> </p>
+<p><strong>Call, delegatecall and staticcall</strong> are used to interface with contracts that do not follow the ABI, or to get more direct control over the encoding. </p>
+<p>We are focused on providing the highest level of security in our products.  So, we feel that interacting with contracts that do not have an ABI public description is not in line with what we want to achieve. Therefore, we do not support or have any plans to support these features or to create an analogue. Workarounds have not been specified yet.</p>
+<h2 id="return-and-callback">Return and Callback</h2>
+<p><strong>Return</strong> works as expected only for internal contract calls according to TON architecture. It is not possible to use <strong>return</strong> to receive a message back from external contract.</p>
+<p>By design, in TON you need to use <strong>callback</strong> as a separate function in the second contract that sends a message back.</p>
+<p>If contract A calls contract B and requires a return of value, a <strong>callback</strong> should be specified in contract A to receive the answer.</p>
+<p>Example:</p>
+<pre><code class="javascript">contract A { 
+ function a() { 
+   B.b(); //make request
+ } 
+ function c() { 
+ //this is callback
+  }
+}
+contract B { 
+ function b() { 
+     A.c() //send answer }
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Solidity Support status/" class="btn btn-neutral float-right" title="Solidity Support Status">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../LLVM Compiler/4. Debugging Options/" class="btn btn-neutral" title="4. Debugging Options"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../LLVM Compiler/4. Debugging Options/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Solidity Support status/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>

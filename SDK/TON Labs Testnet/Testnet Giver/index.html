@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Testnet Giver - DOC.TON.DEV</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Testnet Giver";
+    var mkdocs_page_input_path = "SDK\\TON Labs Testnet\\Testnet Giver.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> DOC.TON.DEV</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Compilers</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../Compilers/ABI Specification/">ABI Specification</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../Compilers/Intro/">Intro</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../Compilers/Linker CLI/">Linker CLI</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">LLVM Compiler</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../Compilers/LLVM Compiler/1. Compiler Highlights/">1. Compiler Highlights</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../Compilers/LLVM Compiler/2. C Support Status/">Language Features</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../Compilers/LLVM Compiler/3. C to TVM Library/">3. C to TVM Library</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../Compilers/LLVM Compiler/4. Debugging Options/">4. Debugging Options</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Solidity Compiler</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../Compilers/Solidity Compiler/Reference Guide/">Reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../Compilers/Solidity Compiler/Solidity Support status/">Solidity Support Status</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../Compilers/Solidity Compiler/Usage/">Usage</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">FAQ</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../FAQ/">TON Dev Documentation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../FAQ/SDK and Integration/">SDK and Integration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../FAQ/Smart Contracts/">Smart Contracts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../FAQ/Solidity Compiler/">Solidity Compiler</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../FAQ/TON and TVM/">TON and TVM</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Misc</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../Misc/Glossary/">The Moonspeak</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">SDK</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Installation/">Installation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Overview/">Overview</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Auxiliaries</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Auxiliaries/Getting Logs/">Getting Logs</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Auxiliaries/Installing Ubuntu VM/">Installing Ubuntu VM</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Auxiliaries/TON SDK CLI/">TON SDK CLI</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Auxiliaries/Troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Client Libraries</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Library Modules</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Client Libraries/Library Modules/Contracts/">Contracts</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Client Libraries/Library Modules/Crypto/">Crypto</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Client Libraries/Library Modules/Overview/">Overview</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Client Libraries/Library Modules/Queries/">Queries</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Using Libraries</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Client Libraries/Using Libraries/Node.js/">Node.js</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Client Libraries/Using Libraries/Rust/">Rust</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Local node</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Local node/Local Node/">Local Node</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Local node/Node SE Giver/">Node SE Giver</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">TON Labs Testnet</span>
+    <ul class="subnav">
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">Testnet Giver</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#preparation">Preparation</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#prerequisites">Prerequisites</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#basic-installation">Basic Installation</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#run-the-local-node">Run the Local Node</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#manual-installation">Manual Installation</a></li>
+    
+
+    <li class="toctree-l4"><a href="#install-client-libraries">Install Client Libraries</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#rust">Rust</a></li>
+        
+            <li><a class="toctree-l5" href="#nodejs">Node.js</a></li>
+        
+            <li><a class="toctree-l5" href="#web">Web</a></li>
+        
+            <li><a class="toctree-l5" href="#react-native">React Native</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">TON Blockchain</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../TON Blockchain/Gal Calculation Basics/">Gas Calculation Basics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../TON Blockchain/Replay Attack Protection/">Replay Attack Protection</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../TON Blockchain/Storage Fee Calculation/">Storage Fee Calculation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../TON Blockchain/TVM Error Codes/">TVM Error Codes</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">DOC.TON.DEV</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>TON Labs Testnet &raquo;</li>
+        
+      
+        
+          <li>SDK &raquo;</li>
+        
+      
+    
+    <li>Testnet Giver</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="preparation">Preparation</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>Install the latest version of <a href="https://docs.docker.com/install/">Docker</a>. See installation tips in the screenshots below:</li>
+</ul>
+<p><img alt="img" src="https://tonlabs.zeroheight.com/uploads/LXwZDEvN59LmO5AEg9PXjg.png" /></p>
+<p><img alt="img" src="https://tonlabs.zeroheight.com/uploads/HlTD8VkiUFQIvrd7ucCeHw.png" /></p>
+<ul>
+<li>For Linux users, make sure that you are able to run docker as non-root user (see <a href="https://docs.docker.com/install/linux/linux-postinstall/">https://docs.docker.com/install/linux/linux-postinstall/</a>);</li>
+</ul>
+<blockquote>
+<p><strong>Tip</strong>: check this page for more Docker installation options <a href="https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04">https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04</a>.</p>
+</blockquote>
+<ul>
+<li>Install <a href="https://www.digitalocean.com/community/tutorial_collections/38">Node.js 10.x</a> or newer.</li>
+</ul>
+<blockquote>
+<p>Make sure that Docker daemon is running on your computer. To check its status, call <code>docker ps</code>. </p>
+<p>Note that it is recommended to have at least 2Gb of RAM to use Node SE efficiently.</p>
+</blockquote>
+<h2 id="basic-installation">Basic Installation</h2>
+<p>This is the easiest version. You can only call three commands to install the solution.</p>
+<p>First, install TON Labs CLI by running:</p>
+<pre><code class="shell">npm install -g ton-dev-cli
+</code></pre>
+
+<blockquote>
+<p><strong>Important</strong>: If you get errors related to permissions when trying to install packages globally, you can try to fix them using the following options: </p>
+</blockquote>
+<p><a href="https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally">https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally</a>. </p>
+<blockquote>
+<p>Or call:</p>
+</blockquote>
+<pre><code class="shell"> sudo chown -R $(whoami) $(npm root -g)
+</code></pre>
+
+<blockquote>
+<p>If you fail, run the command under <code>sudo</code>.</p>
+</blockquote>
+<p>Then setup your machine. The step is optional, because <code>tondev start</code> and <code>tondev sol</code> perform the step on demand (see below).</p>
+<pre><code class="shell">tondev setup
+</code></pre>
+
+<h3 id="run-the-local-node">Run the Local Node</h3>
+<p>Call the following command to run the local node instance (Node SE):</p>
+<pre><code class="shell">tondev start
+</code></pre>
+
+<h2 id="manual-installation">Manual Installation</h2>
+<p>If you have troubles with <code>tondev</code> CLI utility you can install all required components yourself with the following commands:</p>
+<blockquote>
+<p>Note that Windows and Linux use different slashes (<strong>/</strong> vs. *<em>*</em>) for system paths. Make sure to change them as needed in the paths to avoid errors. </p>
+</blockquote>
+<pre><code class="shell">docker pull tonlabs/local-node
+docker pull tonlabs/compilers
+
+docker create -e USER_AGREEMENT=yes --name tonlabs-local-node -i -p80:80 tonlabs/local-node
+mkdir &lt;user home directory&gt;/.tonlabs/compilers/projects
+docker create -e USER_AGREEMENT=yes --name tonlabs-compilers -it --mount type=bind,dst=/projects,src=&lt;user home directory&gt;/.tonlabs/compilers/projects tonlabs/compilers
+
+docker start tonlabs-local-node
+docker start tonlabs-compilers
+
+</code></pre>
+
+<p>Home directory may have one of the following formats:</p>
+<ul>
+<li>Windows:<code>C:\Users\User1</code></li>
+<li>MacOS:<code>'/Users/johnDough'</code></li>
+<li>Linux: <code>/home/johnDough</code></li>
+</ul>
+<p>​      </p>
+<iframe class="no-border max-full-width full-height flex-grow" src="https://www.youtube.com/embed/S-WxdIL3vIA?autohide=1&amp;showinfo=0&amp;rel=0&amp;fs=0" style="max-width: 100%; height: 346px; -webkit-box-flex: 1; flex-grow: 1; border: none;"></iframe>
+
+<h2 id="install-client-libraries">Install Client Libraries</h2>
+<blockquote>
+<p><strong>Tip</strong>: go to the Getting Started section, to create your own environment and a test project from scratch according to detailed guidelines.</p>
+</blockquote>
+<h3 id="rust">Rust</h3>
+<ol>
+<li>Add a dependency into your cargo manifest:</li>
+</ol>
+<pre><code class="shell">[dependencies]
+ton-client-rs = &quot;0.11.1&quot;
+</code></pre>
+
+<ol>
+<li>Call the following command:</li>
+</ol>
+<pre><code class="shell">cargo update
+</code></pre>
+
+<h3 id="nodejs">Node.js</h3>
+<p>Call the following command to install Node.js client library (the recommended version comes first):</p>
+<pre><code class="shell">&quot;dependencies&quot;: { &quot;ton-client-node-js&quot;: &quot;^0.12.1&quot;}
+</code></pre>
+
+<p>Then execute (in the project folder):</p>
+<pre><code class="shell">~/ton-dev/hello$ npm install   
+</code></pre>
+
+<p>Or instead of steps 1 and 2 call:</p>
+<pre><code class="shell">npm install ton-client-node-js
+</code></pre>
+
+<h3 id="web">Web</h3>
+<p>Call the following command to install client library for web browsers:</p>
+<pre><code class="shell">npm install ton-client-web-js
+</code></pre>
+
+<h3 id="react-native">React Native</h3>
+<p>Call the following command to install client library for React Native:</p>
+<pre><code class="shell">npm install ton-client-react-native-js 
+</code></pre>
+
+<iframe class="no-border max-full-width full-height flex-grow" src="https://www.youtube.com/embed/FMLTyQ2bYvE?autohide=1&amp;showinfo=0&amp;rel=0&amp;fs=0" style="max-width: 100%; height: 346px; -webkit-box-flex: 1; flex-grow: 1; border: none;"></iframe>
+
+<blockquote>
+<p>Visit <a href="https://ton.dev/">TON Dev</a> for additional product, company &amp; community info.</p>
+</blockquote>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../../TON Blockchain/Gal Calculation Basics/" class="btn btn-neutral float-right" title="Gas Calculation Basics">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../Local node/Node SE Giver/" class="btn btn-neutral" title="Node SE Giver"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../Local node/Node SE Giver/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../../TON Blockchain/Gal Calculation Basics/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Replay Attack Protection - DOC.TON.DEV</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Replay Attack Protection";
+    var mkdocs_page_input_path = "TON Blockchain\\Replay Attack Protection.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> DOC.TON.DEV</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Compilers</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Compilers/ABI Specification/">ABI Specification</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Compilers/Intro/">Intro</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Compilers/Linker CLI/">Linker CLI</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">LLVM Compiler</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/LLVM Compiler/1. Compiler Highlights/">1. Compiler Highlights</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/LLVM Compiler/2. C Support Status/">Language Features</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/LLVM Compiler/3. C to TVM Library/">3. C to TVM Library</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/LLVM Compiler/4. Debugging Options/">4. Debugging Options</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Solidity Compiler</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/Solidity Compiler/Reference Guide/">Reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/Solidity Compiler/Solidity Support status/">Solidity Support Status</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/Solidity Compiler/Usage/">Usage</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">FAQ</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../FAQ/">TON Dev Documentation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../FAQ/SDK and Integration/">SDK and Integration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../FAQ/Smart Contracts/">Smart Contracts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../FAQ/Solidity Compiler/">Solidity Compiler</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../FAQ/TON and TVM/">TON and TVM</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Misc</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Misc/Glossary/">The Moonspeak</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">SDK</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../SDK/Installation/">Installation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../SDK/Overview/">Overview</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Auxiliaries</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Auxiliaries/Getting Logs/">Getting Logs</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Auxiliaries/Installing Ubuntu VM/">Installing Ubuntu VM</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Auxiliaries/TON SDK CLI/">TON SDK CLI</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Auxiliaries/Troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Client Libraries</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Library Modules</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Library Modules/Contracts/">Contracts</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Library Modules/Crypto/">Crypto</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Library Modules/Overview/">Overview</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Library Modules/Queries/">Queries</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Using Libraries</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Using Libraries/Node.js/">Node.js</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Using Libraries/Rust/">Rust</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Local node</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Local node/Local Node/">Local Node</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Local node/Node SE Giver/">Node SE Giver</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">TON Labs Testnet</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/TON Labs Testnet/Testnet Giver/">Testnet Giver</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">TON Blockchain</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Gal Calculation Basics/">Gas Calculation Basics</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Replay Attack Protection</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#replay-attack-protection">Replay Attack Protection</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#implementation-options">Implementation Options</a></li>
+        
+            <li><a class="toctree-l4" href="#conclusion">Conclusion</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Storage Fee Calculation/">Storage Fee Calculation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../TVM Error Codes/">TVM Error Codes</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">DOC.TON.DEV</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>TON Blockchain &raquo;</li>
+        
+      
+    
+    <li>Replay Attack Protection</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="replay-attack-protection">Replay Attack Protection</h1>
+<p>All external messages must be protected against replay attacks. Otherwise, a malicious party can resend an external message obtained from blockchain and repeat a transaction for a smart contract. For example, a hacker can repeat a Gram transfer and bring an account balance to zero. For internal messages the risk of replay attacks is irrelevant, as they only can be generated inside blockchain by other contracts.</p>
+<h2 id="implementation-options">Implementation Options</h2>
+<p>Different approaches to implementing replay attack protection exist. None of them is a silver bullet, but there are several indicators applied to compare and evaluate them:</p>
+<ul>
+<li>Gas consumption</li>
+<li>Storage fees</li>
+<li>Race condition</li>
+<li>Usability</li>
+</ul>
+<h3 id="sequence-number">Sequence number</h3>
+<p>This is a very simple protection option. It implies that each protected contract stores a counter (i.e. 32bit integer) that is initially set to zero. An external message is then accepted by the contract only under condition that it contains a number equal to the current contract counter value. Each time a new message is accepted, the contract counter value is incremented by one.</p>
+<p>Pros:</p>
+<ul>
+<li>simple implementation in contracts;</li>
+<li>low gas and storage fees;</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>To get the right sequence number off-chain, a client must request the contract state from blockchain before sending an external message. If the state is large, it can cause a network traffic overhead;</li>
+<li>Race condition issue that arises when there are multiple contract owners who can simultaneously call it. One owner can increment the contract counter value before this counter becomes available to the next owner;</li>
+<li>Less sensitive issue of a potential counter overflow in the future. In this case the TVM will throw an exception causing the owner to lose access to the contract.</li>
+</ul>
+<h3 id="timestamp">Timestamp</h3>
+<p>Another simple protection option is adding a timestamp to every external message. It can be a 64-bit value in unixtime format. The contract must store the timestamp of the last accepted external message. When a new external message comes, the contract verifies the message timestamp. It must to be bigger than the previous message timestamp and less then <code>now + interval</code>. The <code>interval</code> value is necessary, because <code>now</code> does not stand for the current time, but indicates creation time of the relevant block. The interval can be equal the block generation period or bigger.</p>
+<p>Pros:</p>
+<ul>
+<li>very simple implementation;</li>
+<li>No need to request account state before sending external messages.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Race condition issues remains unresolved as in case of sequence number implementation;</li>
+<li>Client time must be synchronized with blockchain time.</li>
+</ul>
+<h3 id="set-of-accepted-messages">Set of accepted messages</h3>
+<ol>
+<li>Dictionary of randoms</li>
+</ol>
+<p>This option implies that every external message contains a random value, for example, a 32bit integer. A protected contract, in turn, stores previously used randoms in a dictionary, compares message randoms with it and rejects a message if there is a match detected.</p>
+<p>Pros:</p>
+<ul>
+<li>no need to request account state before sending an external message;</li>
+<li>No race condition; simultaneous access to contract of multiple parties is supported. Collisions are still possible when multiple clients have the same random, but chances can be minimized.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>consumes a lot of gas for dictionary write/read operations. Note that the gas fee will increase in the future;</li>
+<li>
+<p>high storage fees for storing dictionary.</p>
+</li>
+<li>
+<p>Dictionary of messages with garbage collection</p>
+</li>
+</ul>
+<p>This option implies that every external message contains an '<em>expire-at</em>' integer that defines the time when the message becomes invalid (i.e. expires). The contract, in turn, must store a dictionary with all recently accepted and not expired external messages. The key is a message hash, the value is the relevant 'expire-at' integer.</p>
+<p>The contract then rejects all messages that are already present in its dictionary. To avoid persistent data increase, a protected contract can delete messages with the <code>expire-at</code> value less than <code>now</code> from its dictionary.</p>
+<p>Pros:</p>
+<ul>
+<li>no need to request the account state before sending an external message;</li>
+<li>No race condition issues.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Harder to implement compared to the above option with a dictionary of randoms;</li>
+<li>High gas fees caused by the need to access a dictionary;</li>
+<li>High storage fees, yet these can be reduced by deleting expired messages from the dictionary;</li>
+<li>Garbage collecting also involves some gas costs.</li>
+</ul>
+<h3 id="sessions">Sessions</h3>
+<p>Before sending requests to contract, a user creates a session with a contract by sending a <em>create_session</em> external message. The message contains a new session ID, its expired-at time and a starting sequence number. The contract stores a session dictionary.</p>
+<p>After a session is created, the user adds the session_id and the next session sequence number to every external message. For every external message (not <em>create_session</em>) the contract checks that:</p>
+<ul>
+<li>the message session ID exists in dictionary</li>
+<li>the message sequence number is equal to the stored session number, and</li>
+<li>the <code>now</code> value is less then the <code>expired-at</code> value for session</li>
+</ul>
+<p>If all checks are passed successfully, the contract increments the stored sequence number for the session. In case of failure, the message is rejected.</p>
+<p>Also, expired sessions require some garbage collection.</p>
+<p>Pros:</p>
+<ul>
+<li>No need to request the account state before sending an external message;</li>
+<li>No race condition issues;</li>
+<li>No collisions.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Harder to implement compared to all the options covered above;</li>
+<li>High gas fees;</li>
+<li>High storage fees;</li>
+<li>Need to use garbage collecting;</li>
+<li>Unsuitable for simple single-user contracts.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>In TON Labs, we selected a lightweight and simple replay protection option; it will be implemented in the compiler by default and based on the <strong>timestamp</strong> approach. It is supposed to work well for single-user contracts, as well as for contracts without heavy race conditions. It is easy to use given that TON Labs SDK enables inserting a timestamp automatically on the client side. Also, there will be an option to redefine the default protection method by overloading a special contract function. This is how contract developers will be able to implement any protection option they seem fit.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Storage Fee Calculation/" class="btn btn-neutral float-right" title="Storage Fee Calculation">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Gal Calculation Basics/" class="btn btn-neutral" title="Gas Calculation Basics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Gal Calculation Basics/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Storage Fee Calculation/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

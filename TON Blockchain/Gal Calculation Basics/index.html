@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Gas Calculation Basics - DOC.TON.DEV</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Gas Calculation Basics";
+    var mkdocs_page_input_path = "TON Blockchain\\Gal Calculation Basics.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> DOC.TON.DEV</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Compilers</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Compilers/ABI Specification/">ABI Specification</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Compilers/Intro/">Intro</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Compilers/Linker CLI/">Linker CLI</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">LLVM Compiler</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/LLVM Compiler/1. Compiler Highlights/">1. Compiler Highlights</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/LLVM Compiler/2. C Support Status/">Language Features</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/LLVM Compiler/3. C to TVM Library/">3. C to TVM Library</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/LLVM Compiler/4. Debugging Options/">4. Debugging Options</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Solidity Compiler</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/Solidity Compiler/Reference Guide/">Reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/Solidity Compiler/Solidity Support status/">Solidity Support Status</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/Solidity Compiler/Usage/">Usage</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">FAQ</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../FAQ/">TON Dev Documentation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../FAQ/SDK and Integration/">SDK and Integration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../FAQ/Smart Contracts/">Smart Contracts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../FAQ/Solidity Compiler/">Solidity Compiler</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../FAQ/TON and TVM/">TON and TVM</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Misc</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Misc/Glossary/">The Moonspeak</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">SDK</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../SDK/Installation/">Installation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../SDK/Overview/">Overview</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Auxiliaries</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Auxiliaries/Getting Logs/">Getting Logs</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Auxiliaries/Installing Ubuntu VM/">Installing Ubuntu VM</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Auxiliaries/TON SDK CLI/">TON SDK CLI</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Auxiliaries/Troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Client Libraries</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Library Modules</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Library Modules/Contracts/">Contracts</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Library Modules/Crypto/">Crypto</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Library Modules/Overview/">Overview</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Library Modules/Queries/">Queries</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Using Libraries</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Using Libraries/Node.js/">Node.js</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Using Libraries/Rust/">Rust</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Local node</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Local node/Local Node/">Local Node</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Local node/Node SE Giver/">Node SE Giver</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">TON Labs Testnet</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/TON Labs Testnet/Testnet Giver/">Testnet Giver</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">TON Blockchain</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Gas Calculation Basics</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#gas-calculation-basics">Gas Calculation Basics</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#ton-gas-implementation">TON Gas Implementation</a></li>
+        
+            <li><a class="toctree-l4" href="#ton-labs-implementation">TON Labs Implementation</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Replay Attack Protection/">Replay Attack Protection</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Storage Fee Calculation/">Storage Fee Calculation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../TVM Error Codes/">TVM Error Codes</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">DOC.TON.DEV</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>TON Blockchain &raquo;</li>
+        
+      
+    
+    <li>Gas Calculation Basics</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="gas-calculation-basics">Gas Calculation Basics</h1>
+<h2 id="ton-gas-implementation">TON Gas Implementation</h2>
+<h3 id="specification-overview"><strong>Specification Overview</strong></h3>
+<p>The entire state of TVM consists of the five components:</p>
+<ul>
+<li>stack</li>
+<li>control registers</li>
+<li>current continuation</li>
+<li>current codepage</li>
+<li>gas limits</li>
+</ul>
+<p>Collectively these are called SCCCG.</p>
+<p>The <strong>Gas</strong> component limits gas usage and сontains four signed 64-bit integers:</p>
+<ul>
+<li>the remaining gas: <strong>gr</strong></li>
+<li>the current gas limit: <strong>gl</strong></li>
+<li>the maximal gas limit: <strong>gm</strong></li>
+<li>the gas credit: <strong>gc</strong>.</li>
+</ul>
+<p>The following is always true:</p>
+<p><strong>0 ≤ gl ≤ gm, gc ≥ 0, and gr ≤ gl + gc</strong></p>
+<p><strong>gc</strong> is initialized by zero for internal messages, <strong>gr</strong> is initialized by <strong>gl + gc</strong> and gradually decreases, as the TVM runs. When <strong>gr</strong> becomes negative or if contract terminates with <strong>gc &gt; 0</strong>, an <strong>out of gas</strong> exception is triggered.</p>
+<p>According to the original TON, for most primitives gas is calculated according to the following formula:</p>
+<p><strong>Pb := 10 + b</strong></p>
+<p>where <strong>b</strong> is the instruction length in bits. The same is true for TON Labs implementation.</p>
+<p>Apart from integer constants, the following expressions may appear:</p>
+<ul>
+<li>The total price of loading cells. Currently it is 100 gas units per cell.</li>
+<li>The total price of creating new Cells from Builders. Currently it is 500 gas units.</li>
+<li>Exception throwing. 50 gas units per exception.</li>
+<li>Tuple gas price. 1 gas unit for every tuple element.</li>
+</ul>
+<p>The usage of these additional integers remains unclear now. Research is underway.</p>
+<h3 id="global-gas-limits">Global gas limits</h3>
+<p>Global gas limits are values stored in the masterchain configuration contract. Global values are standard and do not change at contract deployment. Only validator consensus can modify them.</p>
+<p>The following values are now used for shardchains:</p>
+<ul>
+<li>Global_gas_price = 1000</li>
+<li>Global_gas_limit = 1000000</li>
+<li>Global_gas_credit = 10000</li>
+<li>Global_block_gas_limit = 10000000</li>
+</ul>
+<h3 id="gas-related-tvm-primitives">Gas-related TVM primitives</h3>
+<p>These is the list of official TVM primitives used for gas-related operations:</p>
+<ul>
+<li>F800 — ACCEPT, sets current gas limit gl to its maximal allowed value gm, and resets the gas credit gc to zero, decreasing the value of gr by gc in the process. In other words, the current smart contract agrees to buy some gas to finish the current transaction. This action is required to process external messages, which bring no value (hence no gas) with themselves.</li>
+<li>F801 — SETGASLIMIT (g – ), sets current gas limit gl to the minimum of g and gm, and resets the gas credit gc to zero. If the gas consumed so far (including the present instruction) exceeds the resulting value of gl , an (unhandled) out of gas exception is thrown before setting new gas limits. Notice that SETGASLIMIT with an argument g ≥ 2 63 − 1 is equivalent to ACCEPT.</li>
+<li>F802 — BUYGAS (x – ), computes the amount of gas that can be bought for x nanograms, and sets gl accordingly in the same way as SETGASLIMIT.</li>
+<li>F804 — GRAMTOGAS (x – g), computes the amount of gas that can be bought for x nanograms. If x is negative, returns 0. If g exceeds 2 63−1, it is replaced with this value.</li>
+<li>F805 — GASTOGRAM (g – x), computes the price of g gas in nanograms.</li>
+<li>F806–F80F — Reserved for gas-related primitives. These are yet to be released.</li>
+</ul>
+<p>All of the above are operational in the TON TVM implementation.</p>
+<h2 id="ton-labs-implementation">TON Labs Implementation</h2>
+<p>The general gas formula is the same as specified by TON specifications. Overall, TON Labs nodes operate in compliance with the specification.</p>
+<p>For every executed primitive, the amount of gas is added to the virtual machine according to the specification formula. Gas value for every primitive is based on <strong>gr</strong>.</p>
+<h3 id="gas-initialization-types">Gas initialization types</h3>
+<p><strong>1. Calling contract from another contract</strong></p>
+<p>An internal message with a balance value is received. In this case, the following formulas are applied to determine limits:</p>
+<ul>
+<li>gm = min(account balance / gas price, global_gas_limit)</li>
+<li>gl = min(message value / gas price, global_gas_limit)</li>
+<li>gc = 0</li>
+<li>gr = gc + gl</li>
+</ul>
+<p>By default gas costs are allocated to the caller contract that triggers the transaction with a message. Accepting is also available for internal contracts. If ACCEPT is not called, gas is taken from the caller contract according to the message value. In other words, the message value defines the current limit. The message value determines the starting TVM gas limit.</p>
+<p>So, to put it plain, if ACCEPT is not called, the message pays, if ACCEPT is used, additional gas can be bought by the target contract. This approach enables flexible contract design where either total gas is paid by the caller contract (but in this case it has to have enough gas at any moment of time) or the target contract also incurs costs.</p>
+<p><strong>2. Offchain contract call</strong></p>
+<p>External messages do not carry balance values. In this case, the values are calculated according to the following formulas:</p>
+<ul>
+<li>gm = min(account balance / gas price, global_gas_limit)</li>
+<li>gl = 0</li>
+<li>gc = min(gm, global_gas_credit)</li>
+<li>gr = gc + gl</li>
+</ul>
+<p>As external messages have no gas value, gas is credited to execute it. Target contracts have to cover costs by calling Accept to buy gas.</p>
+<p>If a contract returns an exception before the credit is given, no gas fee applies</p>
+<p>As the public code for node has just been released this documentation is likely to be updated.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Replay Attack Protection/" class="btn btn-neutral float-right" title="Replay Attack Protection">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../SDK/TON Labs Testnet/Testnet Giver/" class="btn btn-neutral" title="Testnet Giver"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../SDK/TON Labs Testnet/Testnet Giver/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Replay Attack Protection/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

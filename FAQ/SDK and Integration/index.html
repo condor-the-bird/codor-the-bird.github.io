@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>SDK and Integration - DOC.TON.DEV</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "SDK and Integration";
+    var mkdocs_page_input_path = "FAQ\\SDK and Integration.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> DOC.TON.DEV</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Compilers</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Compilers/ABI Specification/">ABI Specification</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Compilers/Intro/">Intro</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Compilers/Linker CLI/">Linker CLI</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">LLVM Compiler</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/LLVM Compiler/1. Compiler Highlights/">1. Compiler Highlights</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/LLVM Compiler/2. C Support Status/">Language Features</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/LLVM Compiler/3. C to TVM Library/">3. C to TVM Library</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/LLVM Compiler/4. Debugging Options/">4. Debugging Options</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Solidity Compiler</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/Solidity Compiler/Reference Guide/">Reference Guide</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/Solidity Compiler/Solidity Support status/">Solidity Support Status</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Compilers/Solidity Compiler/Usage/">Usage</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">FAQ</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../">TON Dev Documentation</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">SDK and Integration</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#sdk-and-integration">SDK and Integration</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Smart Contracts/">Smart Contracts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Solidity Compiler/">Solidity Compiler</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../TON and TVM/">TON and TVM</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Misc</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Misc/Glossary/">The Moonspeak</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">SDK</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../SDK/Installation/">Installation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../SDK/Overview/">Overview</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Auxiliaries</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Auxiliaries/Getting Logs/">Getting Logs</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Auxiliaries/Installing Ubuntu VM/">Installing Ubuntu VM</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Auxiliaries/TON SDK CLI/">TON SDK CLI</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Auxiliaries/Troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Client Libraries</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Library Modules</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Library Modules/Contracts/">Contracts</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Library Modules/Crypto/">Crypto</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Library Modules/Overview/">Overview</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Library Modules/Queries/">Queries</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Using Libraries</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Using Libraries/Node.js/">Node.js</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../SDK/Client Libraries/Using Libraries/Rust/">Rust</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Local node</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Local node/Local Node/">Local Node</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/Local node/Node SE Giver/">Node SE Giver</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">TON Labs Testnet</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../SDK/TON Labs Testnet/Testnet Giver/">Testnet Giver</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">TON Blockchain</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../TON Blockchain/Gal Calculation Basics/">Gas Calculation Basics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../TON Blockchain/Replay Attack Protection/">Replay Attack Protection</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../TON Blockchain/Storage Fee Calculation/">Storage Fee Calculation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../TON Blockchain/TVM Error Codes/">TVM Error Codes</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">DOC.TON.DEV</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>FAQ &raquo;</li>
+        
+      
+    
+    <li>SDK and Integration</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="sdk-and-integration">SDK and Integration</h1>
+<p><strong>Q</strong>: Would you be able to point me to where BOC messages are created or signed inside the JavaScript or Rust SDK? In the JS SDK, I just see that all calls end up hitting <code>this.requestLibrary</code> with some library specified, and that looks like it ends up calling a <code>TONClientLibrary</code> module, but it's not clear where these libraries actually exist (they seem to be on the node itself).</p>
+<p><strong>A</strong>: BOC messages are created and signed inside the Rust SDK library. The library is located at the client side. For the Node.js SDK client, the native Node.js addon is used. For React Native, there is a native library for target platform where the client application is running. For the Web client, there is the Web Assembly module downloaded and executed at the client device. The Rust SDK library contains core SDK functions used on all platforms.</p>
+<p>The SDK will be available as Open Source and more platform and language rappers are to be developed. We are open to customer and community suggestions and contributions to the repository, once it is open.</p>
+<hr />
+<p><strong>Q</strong>: Don’t see any code in the SDK's that is actually generating keys locally or constructing .boc messages. It seems they are just calling your node to do that for them, so it seems like more of a client to the node. Please correct me if that’s not right.</p>
+<p><strong>A</strong>: See the previous answer. Keys are generated in the Rust core library running on a client device. The message BOC construction code is also located there. The SDK's interaction with the node is limited to sending external blockchain messages calling contracts and querying results from the GraphQL server. All crypto operations are performed locally.</p>
+<hr />
+<p><strong>Q</strong>: Is there an API call to the full node that returns a given account’s balance along with the block height at which that balance was calculated, in a single API call? Note: This IS NOT the same thing as historical balance lookup. (Example: GET /balance/account1 -&gt; {balance:10, height: 123902}) The current account state provided by the lite-client does not include this information. Can we be given this information if it is not available today?</p>
+<p><strong>A</strong>: It is possible to get this information by the series of graphQL queries:</p>
+<ul>
+<li>query an account by its ID (address) and remember <code>last_trans_lt</code> (last transaction logical time)</li>
+</ul>
+<pre><code class="SQL"> query {
+   accounts(filter: {id: {eq: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;}}) {
+     id,
+     storage {last_trans_lt}
+   }
+ }
+</code></pre>
+
+<ul>
+<li>result:</li>
+</ul>
+<pre><code class="html">{
+   &quot;data&quot;: {
+     &quot;accounts&quot;: [
+       {
+         &quot;id&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,
+         &quot;storage&quot;: {
+           &quot;last_trans_lt&quot;: 4
+         }
+       }
+     ]
+   }
+ }
+</code></pre>
+
+<ul>
+<li>query the transaction with your account ID and the logical time; remember the corresponding <code>block_id</code></li>
+</ul>
+<pre><code class="sql">query {
+   transactions(filter: {
+     account_addr: {eq: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;}
+     lt: {eq: 4}
+   }) {
+     id,
+     block_id
+   }
+ }
+</code></pre>
+
+<ul>
+<li>result:</li>
+</ul>
+<pre><code class="HTML">{
+   &quot;data&quot;: {
+     &quot;transactions&quot;: [
+       {
+         &quot;id&quot;: &quot;3badb9e5707db8e61e0e335e02eacb6df2a118512791b620c73a71d826e840c3&quot;,
+         &quot;block_id&quot;: &quot;4a8537f7499e122fc539b6250cd70168e80a129dcd684de6d0928d86105cf430&quot;
+       }
+     ]
+   }
+ }
+</code></pre>
+
+<ul>
+<li>query a block by an ID with the required data:</li>
+</ul>
+<pre><code class="sql">query {
+   blocks(filter: {
+     id: {eq: &quot;4a8537f7499e122fc539b6250cd70168e80a129dcd684de6d0928d86105cf430&quot;}
+   }) {
+     id,
+        info {
+       seq_no
+     }
+   }
+ }
+</code></pre>
+
+<ul>
+<li>result:</li>
+</ul>
+<pre><code class="html">{
+   &quot;data&quot;: {
+     &quot;blocks&quot;: [
+       {
+         &quot;id&quot;: &quot;4a8537f7499e122fc539b6250cd70168e80a129dcd684de6d0928d86105cf430&quot;,
+         &quot;info&quot;: {
+           &quot;seq_no&quot;: 1
+         }
+       }
+     ]
+   }
+ }
+</code></pre>
+
+<hr />
+<p><strong>Q</strong>: Does your node currently (or will you) provide an API to submit pre-signed messages (e.g. a pre-signed bag-of-cells message)? Can we have this endpoint (not a CLI interface) if it does not exist today?</p>
+<p><strong>A</strong>: To send pre-generated messages, use the <code>processMessage</code> function of the SDK JS client. Also, there will be a function to construct unsigned messages. You will be able to sign generated message yourself and then to send it using the SDK. </p>
+<p>For example you can generate message to call the contract by SDK function. That function returns a serialized message and its hash to be signed. You sign it using your own implementation of the signature algorithm (or using some hardware security module). Then you call another SDK function that adds your signature to the message generated at first step. Finally, the resulting signed message can be sent by <code>processMessage</code> function.</p>
+<hr />
+<p><strong>Q</strong>: How does one derive the message (or transaction) hash from a signed bag-of-cells message to a contract? Can you provide details on how we can compute this on our own? (Ideally we can compute this so we can look it up after submitting to the network.)</p>
+<p><strong>A</strong>: The SDK returns hash of the generated message as a message ID. We will provide a function which will return hash for a specific message in the next few weeks. To calculate hash manually, deserialize the bag of cells into a tree of cells and calculate the representation hash of the root cell as described in paragraph <code>3.1.5</code> of the original TVM specification. It's quite an effort, though.</p>
+<hr />
+<p><strong>Q</strong>: It seems that messages are not replay protected on their own. Is this the case? Is there any default replay protection provided by the network or must every contract implement their own sequence number or similar method to replay protection?</p>
+<p><strong>A</strong>: There is no default replay attack protection in TON. A contract developer is supposed to implement it manually. There are only "best practices" by TON developers <a href="https://test.ton.org/smc-guidelines.txt">here</a>. TON Labs compilers will have a default inline implementation of replay protection.</p>
+<hr />
+<p><strong>Q</strong>: Can you provide more explicit details or provide an example of how an account’s address is derived from the compiled contract and initial state and specifically how that hash is computed and over what components? Source code is also helpful here if you can provide it.</p>
+<p><strong>A</strong>: A blockchain account contains the <code>State Init</code> field. It stores the contract code and persisted data. <code>State init</code> is also tree of cells. At contract deployment this field is transferred alongside the deploying message (so called constructor message) and is set as the contract initial state. The representation hash (see paragraph <strong>3.1.5</strong> of the TVM specification) of the contract initial state is the account address. The node checks that the state init hash of the deployment message is equal to the destination address. The SDK will have a function for computing account address by its initial state. The SDK source code will be available soon.</p>
+<hr />
+<p><strong>Q</strong>: Is (or will be) the solidity-to-tvm and tvm-linker source code available to users? If not, can agreements be signed to make it available to partners?</p>
+<p><strong>A</strong>: Yes, both Sol2Tvm compiler and TVM-Linker will be available as open source.</p>
+<hr />
+<p><strong>Q</strong>: With a Solidity contract, how does one properly specify an address parameter? In solidity, addresses are uint256 but this can only capture the address portion and not the workchain_id. How would one specify the full address parameter correctly here? (e.g. “0:D702CC0414858D83A5538A3C1C86231872F006453AF7C825A59F9DD12D636AF” is invalid in solidity for an address param)</p>
+<p><strong>A</strong>: Now we only use the <code>address</code> field of <em>MsgAddressInt</em> structure as Solidity <code>address</code> type. We assume that worckchain_id is 0. But in future the <code>address</code> type will represent the whole <em>MsgAddressInt</em> structure. Now workchain_id can be defined separately as int8.</p>
+<hr />
+<p><strong>Q</strong>: When deploying a contract init message that was created using a solidity contract, the Sol2TVM compiler and tvm_linker, I’m seeing the init succeed initially but then also get replayed dozens of times after. How does one replay protect a contract init message for a solidity-compiled contract? (example message that was replayed after the initialization was already successful previously: <https://test.ton.org/testnet/transaction?account=EQDXAswEFIWNg6VTijwchiMYcvAGRTr3yCWln53RLWNq8CvQ<=195287000001&hash=7F09EC8EEBBAF510D7873CD3DEC494B2DD28A790A7A46E83D0A183F3E672B509>)</p>
+<p><strong>A</strong>: The sample message at <https://test.ton.org/testnet/transaction?account=EQDXAswEFIWNg6VTijwchiMYcvAGRTr3yCWln53RLWNq8CvQ<=195287000001&hash=7F09EC8EEBBAF510D7873CD3DEC494B2DD28A790A7A46E83D0A183F3E672B509> has no init (it is <code>init:nothing</code>), and a transaction with this message is aborted. But in general, the StateInit data attached to a message is used by the node only once: when a contract is in the Uninit state. Replays of such message can succeed, but the contract code will not be changed. An Init msg created with sol2tvm compiler and tvm_linker contains an encoded constructor call. Now you can call constructor multiple times, but in future releases it will be changed.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Smart Contracts/" class="btn btn-neutral float-right" title="Smart Contracts">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../" class="btn btn-neutral" title="TON Dev Documentation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Smart Contracts/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
