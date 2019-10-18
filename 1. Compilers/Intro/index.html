@@ -288,11 +288,27 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#intro">Intro</a></li>
+            <li><a href="#before-your-take-the-leap">Before your take the leap</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-</div>
+<h1 id="intro">Intro</h1>
+<p>The TON Labs Compiler Toolchain enables developers to compile source contract code in popular COP languages and GPLs into the TVM bytecode.</p>
+<p>The Toolchain includes a Solidity to TVM (Sol2TVM) compiler and an LLVM-based compiler that now is ready to take sources code in C (C2TVM). Support of other GPLs and COP languages is planned. </p>
+<p>The compiler Toolchain also includes the so-called tvm-linker that packs code into binary format. </p>
+<p>Read further for more details on components, their roles and usage. </p>
+<p>Also, visit <a href="https://ton.dev/">TON Dev</a> for more product, company and community info.</p>
+<h2 id="before-your-take-the-leap">Before your take the leap</h2>
+<p>To ensure that smart-contract is TVM-ready it has to compile to the virtual machine language (we will call it TVM Assembly for the documentation purposes) and support its value types, data management methods and primitives (instructions implemented to manipulate these values and implement methods).</p>
+<p>In particular it is worth to mention TVM-specific primitives introduced to manipulate TVM persistent data storage containers or <em>Cells ,</em> intermediate storage containers or <em>Builders</em>, and sub-cells (<em>Slices</em>) (tvm.pdf cl. <a href="https://zeroheight.com/86757ecb2/p/836380/t/076088">3.1</a>, A.<a href="https://zeroheight.com/86757ecb2/p/17e4d8/t/8717a1">4.2</a>). For example, NEWC and ENDC Cell-level primitives start and end the <em>Cell</em> creation process.</p>
+<p>TVM's key and most specific methods - <em>Serialization</em> and <em>Deserialization</em> - are, basically, construct cell (pack data) and extract cell data instructions.</p>
+<p><strong>Note</strong>: For exhaustive descriptions of the TVM and TON please, refer to original specifications.</p>
+<p>To help developers, we developed high-level to low-level language compilers. Once fully implemented, our Toolchain will allow developers to reuse their current skills in our ecosystem.</p>
+<blockquote>
+<p>Visit <a href="https://ton.dev/">TON Dev</a> for additional product, company &amp; community info.</p>
+</blockquote></div>
         </div>
 
         <footer class="col-md-12">
